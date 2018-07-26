@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test3</title>
+	<style>
+	p{ font-weight:bold 
+		 font-weight:italic
+
+	
+	}
+</style>
+
+
+	
+
+</head>
+
+<body>
+	<p id="test_p">A paragraph is a brief piece of writing that's around seven to ten sentences long. It has a topic sentence and supporting sentences that all relate closely to the topic sentence. The paragraph form refers to its overall structure, which is a group of sentences focusing on a single topic.</p>
+
+	<button id="id1" onclick="bl()">bold</button>
+	<br>
+<button id="id2" onclick="it()">italic</button>
+
+<button id="id3" onclick="un()">underlined</button>
+<br>
+
+<br>
+<br>
+
+<select id="font"  onchange="changeFont()">
+  <option value="Arial">Arial</option>
+  <option value="Impact">Impact</option>
+  <option value="Courier">Courier</option>
+ 
+    
+</select>
+
+
+
+
+<br>
+<select id="ftSize" onchange="changeSize()">
+  <option value='12px'>12</option>
+  <option value='14px'>14</option>
+  <option value='16px'>16</option>
+  <option value='18px'>18</option>
+  <option value='20px'>20</option>
+  <option value='22px'>22</option>
+  <option value='24px'>24</option>
+  <option value='26px'>26</option>
+</select>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script >
+	 function bl()
+	{
+ 
+  $("p").css("font-weight", "bold");
+}
+
+		 function it()
+	{
+
+  $("p").css("font-style", "italic");
+
+
+ }
+ 		 function un()
+	{
+
+
+  $("p").css("text-decoration", "underline"); 
+
+  
+}
+function changeFont()
+{
+ $("#font").change(function() {
+  
+    $("#test_p").css("font-family", $(this).val());
+
+});
+
+}
+function changeSize()
+{
+  $("#ftSize").change(function() {
+    $("#test_p").css("font-size", $(this).val()) ;
+});
+}</script>
+</body>
+</html>
