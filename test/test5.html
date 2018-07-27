@@ -5,14 +5,59 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<title>test5</title>
 	<style>
-	img {
-    width: 100%;
-    height: auto;
-}
+
 video {
     max-width: 100%;
     height: auto;
 }
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+img {
+    border-radius: 50%;
+  
+}
+
 
 </style>
 <script>
@@ -20,13 +65,42 @@ video {
 	{
 		alert("C'bon 😊 ");
 	}
+
 </script>
 </head>
 <body  style="background-color:yellow" ; >
-	<div class="container " style="background-color:skyblue" ;>
+		<div class="container " style="background-color:skyblue" ;>
   <h1>BONJOUR 🌞</h1> 
   <p>Go my code 😊</p> 
+</div><span><div id="mySidenav" class="sidenav">
+				<div class="container " style="background-color:skyblue" ;>
+  <h1> HELLO 👋</h1> 
+  <p><img src='https://scontent.ftun1-1.fna.fbcdn.net/v/t1.0-1/c0.0.160.160/p160x160/36933392_956787354491401_2758960976609935360_n.jpg?_nc_cat=0&oh=eefe72b3ef37c997086b2a17a9fe107a&oe=5BCF3542'></p> 
 </div>
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+ 
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
 
 <br>
 <br>
