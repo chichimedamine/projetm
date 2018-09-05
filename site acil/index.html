@@ -84,7 +84,6 @@ font-family: 'Aref Ruqaa', serif;
 <script src="//cdn.jsdelivr.net/jwplayer/6.7/jwplayer.js"></script>
 
 
-
  
 </head>
 <body><amp-sidebar id="sidebar" class="cid-qZh1q6xw2t" layout="nodisplay" side="right">
@@ -144,7 +143,7 @@ font-family: 'Aref Ruqaa', serif;
  
 
     <div   class="container">
-        <center><form  id ="gform"  method="post" enctype="text/plain" class="w3-container w3-yellow" onsubmit="dd()" >
+        <center><form  id ="gform"  method="post" enctype="text/plain" class="w3-container w3-yellow" >
 <p>الاسم واللقب <br>
 <input type="text" id="name" name="name"class="w3-input" required><br>
 الجوال<br>
@@ -232,7 +231,7 @@ font-family: 'Aref Ruqaa', serif;
 <br>
 
 
-<input  id="bttn" type="submit" class="btn btn-success"  value="ارسال" onclick="dd()">
+<input  id="bttn" type="button" class="btn btn-success"  value="ارسال" onclick='dd()'  >
 <input id="bttn" type="reset" class="btn btn-danger" value="إلغاء">
 
 </form></center>
@@ -270,20 +269,22 @@ font-family: 'Aref Ruqaa', serif;
 <script>
         function fclg() {
             if (document.getElementById("lang").value=="Français") {
-                location.replace("https://chichimedamine.github.io/projetm/site%20acil/fr.html");
+                location.replace("http://acilmesure.co.nf/fr.html");
             }
             else if (document.getElementById("lang").value=="English") {
-                location.replace("https://chichimedamine.github.io/projetm/site%20acil/en.html");
+                location.replace("http://acilmesure.co.nf/en.html");
 
             }
            
         }
         </script>
+<script >
+ document.getElementById("gform").onsubmit = function() {dd()};
 
-
-    <script type="text/javascript" >
-  function dd()
-{ var m="الاسم واللقب="+document.getElementById("name").value+'//'+"الهاتف="+document.getElementById("comment").value+'//'+"البريد الاكتروني="+document.getElementById("email").value+"//"+"المنتج="+document.getElementById("prod").value+"//"+"الصدر="+document.getElementById("Poitrine").value+"//"+"الكتفان="+document.getElementById("Epaule").value+"//"+"البطن="+document.getElementById("L_estomac").value+"//"+"الذراع="+document.getElementById("La_manche").value+"//"+"طول السترة="+document.getElementById("Longeur").value+"//"+"الحزام="+document.getElementById("Ceinture").value+"//"+"الفخذان="+document.getElementById("Hanche").value+"//"+"طول السروال="+document.getElementById("Longeurp").value+"//"+"الرقبة="+document.getElementById("Cou_nuque").value ;
+ 
+ function dd()
+{ 
+var m="الاسم واللقب="+document.getElementById("name").value+'//'+"الهاتف="+document.getElementById("comment").value+'//'+"البريد الاكتروني="+document.getElementById("email").value+"//"+"المنتج="+document.getElementById("prod").value+"//"+"الصدر="+document.getElementById("Poitrine").value+"//"+"الكتفان="+document.getElementById("Epaule").value+"//"+"البطن="+document.getElementById("L_estomac").value+"//"+"الذراع="+document.getElementById("La_manche").value+"//"+"طول السترة="+document.getElementById("Longeur").value+"//"+"الحزام="+document.getElementById("Ceinture").value+"//"+"الفخذان="+document.getElementById("Hanche").value+"//"+"طول السروال="+document.getElementById("Longeurp").value+"//"+"الرقبة="+document.getElementById("Cou_nuque").value ;
 
 
 
@@ -297,14 +298,11 @@ font-family: 'Aref Ruqaa', serif;
 
 
 
-
-
-
-
-
-
 }
 </script>
+
+
+    
 
   
 </body>

@@ -143,7 +143,7 @@ font-family: 'Aref Ruqaa', serif;
  
 
     <div   class="container">
-        <center><form  id = "gform"  method="post" enctype="text/plain" class="w3-container w3-yellow" onsubmit="dd()">
+        <center><form  onsubmit="dd()" id = "gform"  method="post" enctype="text/plain" class="w3-container w3-yellow" >
 <p>Nom et Prénom <br>
 <input type="text" id="name" name="name"class="w3-input" required><br>
 Tel<br>
@@ -239,7 +239,7 @@ Produit<br>
 <br>
 
 
-<input  id="bttn" type="submit" class="btn btn-success"  value="Envoyer" onclick="dd()">
+<input  id="bttn" type="button" class="btn btn-success"  value="Envoyer" onclick="dd()">
 <input id="bttn" type="reset" class="btn btn-danger" value="Annuler">
 
 </form></center>
@@ -277,10 +277,10 @@ Produit<br>
 <script>
         function fclg() {
             if (document.getElementById("lang").value=="العربية") {
-                location.replace("https://chichimedamine.github.io/projetm/site%20acil/index.html")
+                location.replace("http://acilmesure.co.nf/")
             }
             else if (document.getElementById("lang").value=="English") {
-                location.replace("https://chichimedamine.github.io/projetm/site%20acil/en.html")
+                location.replace("http://acilmesure.co.nf/en.html")
 
             }
            
